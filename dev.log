@@ -1,1 +1,5 @@
--bash: ./node_modules/.bin/vite: No such file or directory
+
+> finance-app@1.0.0 dev
+> vite
+
+sh: 1: vite: not found

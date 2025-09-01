@@ -14,6 +14,11 @@ import {
   AlertCircle
 } from 'lucide-react';
 
+/**
+ * Komponen untuk halaman Dashboard.
+ * Menampilkan ringkasan keuangan, skor kesehatan, aksi cepat, dan data relevan lainnya.
+ * @param {object} props - Props yang diterima dari komponen induk (App.jsx).
+ */
 const Dashboard = ({
   darkMode,
   financialData,
@@ -26,8 +31,11 @@ const Dashboard = ({
 }) => {
   return (
     <div className="space-y-6">
-      {/* Header Summary */}
+      {/* Bagian Ringkasan Utama */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Kartu Total Pemasukan */}
+        {/* Kartu Total Pengeluaran */}
+        {/* Kartu Saldo */}
         <div className={`rounded-xl p-6 ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
           <div className="flex items-center justify-between">
             <div>
@@ -65,7 +73,7 @@ const Dashboard = ({
         </div>
       </div>
 
-      {/* Financial Health Score */}
+      {/* Skor Kesehatan Keuangan */}
       <div className={`rounded-xl p-6 ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <h3 className="text-lg font-semibold mb-4">Financial Health Score</h3>
         <div className="flex items-center space-x-4">
@@ -110,7 +118,7 @@ const Dashboard = ({
         </div>
       </div>
 
-      {/* Quick Actions */}
+      {/* Tombol Aksi Cepat */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <button
           onClick={() => setShowTransactionModal(true)}
@@ -145,7 +153,7 @@ const Dashboard = ({
         </button>
       </div>
 
-      {/* AI Suggestions */}
+      {/* Saran dari AI */}
       <div className={`rounded-xl p-6 ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold">Saran Keuangan Otomatis</h3>
@@ -180,7 +188,7 @@ const Dashboard = ({
         </div>
       </div>
 
-      {/* Recent Transactions */}
+      {/* Daftar Transaksi Terakhir */}
       <div className={`rounded-xl p-6 ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold">Transaksi Terakhir</h3>

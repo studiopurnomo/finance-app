@@ -10,15 +10,19 @@ const UpgradeModal = ({
 }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl p-6 w-full max-w-md`}>
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold">Upgrade ke Premium</h3>
-          <button onClick={() => setShowUpgradeModal(false)}>
-            <X className="w-6 h-6" />
-          </button>
+      <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl w-full max-w-md flex flex-col max-h-[90vh]`}>
+        {/* Header Modal */}
+        <div className="p-6 border-b">
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-semibold">Upgrade ke Premium</h3>
+            <button onClick={() => setShowUpgradeModal(false)}>
+              <X className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
-        <div className="space-y-6">
+        {/* Konten Modal yang Dapat Di-scroll */}
+        <div className="p-6 space-y-6 overflow-y-auto">
           <div className="text-center">
             <Shield className="w-16 h-16 mx-auto mb-4 text-yellow-500" />
             <p className="text-lg font-medium mb-2">Limit Transaksi Tercapai!</p>
@@ -76,16 +80,16 @@ const UpgradeModal = ({
 
           <div>
             <p className="text-sm font-medium mb-3">Pilih Metode Pembayaran:</p>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               {paymentMethods.map(method => (
                 <button
                   key={method.id}
                   onClick={() => setSelectedPaymentMethod(method.id)}
-                  className={`p-3 rounded-lg border-2 ${
+                  className={`p-2 rounded-lg border-2 ${
                     selectedPaymentMethod === method.id
                       ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
                       : 'border-gray-200 dark:border-gray-600'
-                  } hover:border-blue-500 flex flex-col items-center gap-1`}
+                  } hover:border-blue-500 flex flex-col items-center justify-center text-center gap-1`}
                 >
                   <span className="text-2xl">{method.icon}</span>
                   <span className="text-xs">{method.name}</span>
@@ -93,7 +97,10 @@ const UpgradeModal = ({
               ))}
             </div>
           </div>
+        </div>
 
+        {/* Footer Modal */}
+        <div className="p-6 border-t">
           <button
             className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-semibold disabled:opacity-50"
             disabled={!selectedPaymentMethod}

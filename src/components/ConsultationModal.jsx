@@ -3,16 +3,20 @@ import { X, AlertTriangle, CheckCircle, Target } from 'lucide-react';
 
 const ConsultationModal = ({ darkMode, setShowConsultationModal }) => {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto">
-      <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl p-6 w-full max-w-2xl my-8`}>
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold">Konsultasi Keuangan AI</h3>
-          <button onClick={() => setShowConsultationModal(false)}>
-            <X className="w-6 h-6" />
-          </button>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl w-full max-w-2xl flex flex-col max-h-[90vh]`}>
+        {/* Header Modal */}
+        <div className="p-6 border-b">
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-semibold">Konsultasi Keuangan AI</h3>
+            <button onClick={() => setShowConsultationModal(false)}>
+              <X className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
-        <div className="space-y-6">
+        {/* Konten Modal yang Dapat Di-scroll */}
+        <div className="p-6 space-y-6 overflow-y-auto">
           <div className={`rounded-lg p-4 ${darkMode ? 'bg-purple-900/30' : 'bg-purple-100'}`}>
             <h4 className="font-semibold mb-2">Analisis Keuangan Anda</h4>
             <p className="text-sm">Berdasarkan data transaksi 3 bulan terakhir:</p>
@@ -29,11 +33,11 @@ const ConsultationModal = ({ darkMode, setShowConsultationModal }) => {
               </p>
               <div className="mt-3 space-y-2">
                 <p className="font-medium text-sm">Rekomendasi:</p>
-                <ul className="text-sm space-y-1 ml-4">
-                  <li>• Pertimbangkan meal prep di akhir pekan (hemat 30-40%)</li>
-                  <li>• Manfaatkan promo/diskon aplikasi food delivery</li>
-                  <li>• Batasi makan di luar maksimal 2x seminggu</li>
-                  <li>• Alokasikan budget harian Rp 100rb untuk makan</li>
+                <ul className="text-sm list-disc list-inside space-y-1">
+                  <li>Pertimbangkan meal prep di akhir pekan (hemat 30-40%)</li>
+                  <li>Manfaatkan promo/diskon aplikasi food delivery</li>
+                  <li>Batasi makan di luar maksimal 2x seminggu</li>
+                  <li>Alokasikan budget harian Rp 100rb untuk makan</li>
                 </ul>
               </div>
             </div>
@@ -48,11 +52,11 @@ const ConsultationModal = ({ darkMode, setShowConsultationModal }) => {
               </p>
               <div className="mt-3 space-y-2">
                 <p className="font-medium text-sm">Rekomendasi:</p>
-                <ul className="text-sm space-y-1 ml-4">
-                  <li>• Alokasikan 20% (Rp 500rb) ke reksadana pasar uang</li>
-                  <li>• Sisihkan 30% (Rp 750rb) untuk dana darurat</li>
-                  <li>• Pertimbangkan deposito untuk dana jangka menengah</li>
-                  <li>• Pelajari investasi saham dengan modal kecil dulu</li>
+                <ul className="text-sm list-disc list-inside space-y-1">
+                  <li>Alokasikan 20% (Rp 500rb) ke reksadana pasar uang</li>
+                  <li>Sisihkan 30% (Rp 750rb) untuk dana darurat</li>
+                  <li>Pertimbangkan deposito untuk dana jangka menengah</li>
+                  <li>Pelajari investasi saham dengan modal kecil dulu</li>
                 </ul>
               </div>
             </div>
@@ -67,11 +71,11 @@ const ConsultationModal = ({ darkMode, setShowConsultationModal }) => {
               </p>
               <div className="mt-3 space-y-2">
                 <p className="font-medium text-sm">Rekomendasi:</p>
-                <ul className="text-sm space-y-1 ml-4">
-                  <li>• Naikkan alokasi tabungan jadi Rp 1jt/bulan</li>
-                  <li>• Otomatisasi transfer di awal bulan</li>
-                  <li>• Cari side income untuk percepat target</li>
-                  <li>• Review dan kurangi pengeluaran tidak penting</li>
+                <ul className="text-sm list-disc list-inside space-y-1">
+                  <li>Naikkan alokasi tabungan jadi Rp 1jt/bulan</li>
+                  <li>Otomatisasi transfer di awal bulan</li>
+                  <li>Cari side income untuk percepat target</li>
+                  <li>Review dan kurangi pengeluaran tidak penting</li>
                 </ul>
               </div>
             </div>
@@ -110,7 +114,10 @@ const ConsultationModal = ({ darkMode, setShowConsultationModal }) => {
               </div>
             </div>
           </div>
+        </div>
 
+        {/* Footer Modal */}
+        <div className="p-6 border-t">
           <div className="flex gap-3">
             <button className="flex-1 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-semibold">
               Terapkan Rekomendasi
