@@ -90,6 +90,7 @@ const FinanceApp = () => {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   // State untuk form transaksi
   const [transactionType, setTransactionType] = useState('expense');
+  const [editingTransaction, setEditingTransaction] = useState(null); // State untuk transaksi yang diedit
   // State untuk form upgrade
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
   
@@ -215,6 +216,7 @@ const FinanceApp = () => {
                           darkMode={darkMode}
                           transactions={transactions}
                           refreshTransactions={refreshTransactions}
+                          setEditingTransaction={setEditingTransaction}
                           setShowTransactionModal={setShowTransactionModal}
                         />;
               case 'budget':
@@ -270,6 +272,8 @@ const FinanceApp = () => {
                                   transactionType={transactionType}
                                   setTransactionType={setTransactionType}
                                   categories={categories}
+                                  editingTransaction={editingTransaction}
+                                  refreshTransactions={refreshTransactions}
                                 />}
       {showConsultationModal && <ConsultationModal
                                     darkMode={darkMode}

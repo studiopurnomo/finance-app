@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Filter,
   Download,
@@ -6,14 +6,47 @@ import {
   Search,
   TrendingUp,
   TrendingDown,
-  MoreHorizontal
+  Edit,
+  Trash2
 } from 'lucide-react';
+import { deleteTransaction } from '../api/apiService';
 
 /**
  * Komponen untuk halaman Riwayat Transaksi.
- * Menampilkan daftar transaksi dengan fungsionalitas pencarian dan filter.
+ * Menampilkan daftar transaksi dengan fungsionalitas CRUD.
  */
-const Transactions = ({ darkMode, transactions, refreshTransactions, setShowTransactionModal }) => {
+const Transactions = ({
+  darkMode,
+  transactions,
+  refreshTransactions,
+  setEditingTransaction, // Menerima fungsi untuk set transaksi yang akan diedit
+  setShowTransactionModal
+}) => {
+
+  const handleAddNew = () => {
+    setEditingTransaction(null); // Pastikan mode edit tidak aktif
+    setShowTransactionModal(true);
+  };
+
+  const handleEdit = (transaction) => {
+    setEditingTransaction(transaction); // Set transaksi untuk diedit
+    setShowTransactionModal(true);
+  };
+
+  const handleDelete = async (id) => {
+    // Konfirmasi sebelum menghapus
+    if (window.confirm('Apakah Anda yakin ingin menghapus transaksi ini?')) {
+      try {
+        await deleteTransaction(id);
+        alert('Transaksi berhasil dihapus!');
+        await refreshTransactions(); // Refresh daftar transaksi
+      } catch (error) {
+        console.error('Gagal menghapus transaksi:', error);
+        alert('Gagal menghapus transaksi.');
+      }
+    }
+  };
+
   return (
     <div className="space-y-6">
       {/* Header Halaman */}
@@ -30,7 +63,7 @@ const Transactions = ({ darkMode, transactions, refreshTransactions, setShowTran
             Export
           </button>
           <button
-            onClick={() => setShowTransactionModal(true)}
+            onClick={handleAddNew}
             className="px-4 py-2 rounded-lg bg-blue-500 text-white flex items-center gap-2 hover:bg-blue-600"
           >
             <Plus className="w-4 h-4" />
@@ -91,9 +124,14 @@ const Transactions = ({ darkMode, transactions, refreshTransactions, setShowTran
                     {transaction.type === 'income' ? '+' : '-'} Rp {transaction.amount.toLocaleString('id-ID')}
                   </td>
                   <td className="px-4 py-3 text-center">
-                    <button className="text-blue-500 hover:text-blue-600">
-                      <MoreHorizontal className="w-5 h-5" />
-                    </button>
+                    <div className="flex justify-center gap-2">
+                      <button onClick={() => handleEdit(transaction)} className="text-blue-500 hover:text-blue-600">
+                        <Edit className="w-4 h-4" />
+                      </button>
+                      <button onClick={() => handleDelete(transaction.id)} className="text-red-500 hover:text-red-600">
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}

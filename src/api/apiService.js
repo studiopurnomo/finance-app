@@ -111,9 +111,53 @@ export const updateUserProfile = async (profileData) => {
   // }
 };
 
+export const updateTransaction = async (id, transactionData) => {
+  console.log(`MOCK API: Updating transaction ${id} with:`, transactionData);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const index = mockTransactions.findIndex(t => t.id === id);
+      if (index !== -1) {
+        mockTransactions[index] = { ...mockTransactions[index], ...transactionData };
+        resolve(mockTransactions[index]);
+      } else {
+        reject(new Error("Transaction not found"));
+      }
+    }, MOCK_DELAY);
+  });
+  // KODE ASLI (AKTIFKAN NANTI):
+  // try {
+  //   const response = await apiClient.put(`/transactions/${id}`, transactionData);
+  //   return response.data;
+  // } catch (error) {
+  //   console.error('Error updating transaction:', error);
+  //   throw error;
+  // }
+};
+
+export const deleteTransaction = async (id) => {
+  console.log(`MOCK API: Deleting transaction ${id}`);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const index = mockTransactions.findIndex(t => t.id === id);
+      if (index !== -1) {
+        mockTransactions.splice(index, 1);
+        resolve({ message: "Transaction deleted successfully" });
+      } else {
+        reject(new Error("Transaction not found"));
+      }
+    }, MOCK_DELAY);
+  });
+  // KODE ASLI (AKTIFKAN NANTI):
+  // try {
+  //   const response = await apiClient.delete(`/transactions/${id}`);
+  //   return response.data;
+  // } catch (error) {
+  //   console.error('Error deleting transaction:', error);
+  //   throw error;
+  // }
+};
+
 // Anda bisa menambahkan lebih banyak fungsi sesuai kebutuhan aplikasi, seperti:
-// - deleteTransaction(id)
-// - updateTransaction(id, data)
 // - getBudgets()
 // - login(credentials)
 // - register(userData)

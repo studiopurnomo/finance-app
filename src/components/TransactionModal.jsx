@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   X,
-  Plus,
   Camera,
   Coffee,
   Car,
@@ -15,6 +14,7 @@ import {
   TrendingUp,
   DollarSign
 } from 'lucide-react';
+import { addTransaction, updateTransaction } from '../api/apiService';
 
 /**
  * Komponen Modal untuk menambah atau mengedit transaksi.
@@ -24,19 +24,65 @@ const TransactionModal = ({
   setShowTransactionModal,
   transactionType,
   setTransactionType,
-  categories
+  categories,
+  editingTransaction, // null jika 'tambah', berisi objek transaksi jika 'edit'
+  refreshTransactions
 }) => {
-  // Di sini Anda akan menambahkan logika untuk menangani state form dan submit
-  // const [amount, setAmount] = useState('');
-  // const [selectedCategory, setSelectedCategory] = useState(null);
-  // ... etc
+  // State untuk mengelola input form
+  const [amount, setAmount] = useState('');
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [note, setNote] = useState('');
+  const [date, setDate] = useState(new Date().toISOString().split('T')[0]); // Default ke hari ini
 
-  const handleSave = () => {
-    // 1. Kumpulkan data dari state form
-    // 2. Panggil fungsi API `addTransaction`
-    // 3. Jika berhasil, panggil `refreshTransactions()` dari props
-    // 4. Tutup modal `setShowTransactionModal(false)`
-    console.log("Menyimpan transaksi...");
+  // useEffect untuk mengisi form saat mode edit
+  useEffect(() => {
+    if (editingTransaction) {
+      setTransactionType(editingTransaction.type);
+      setAmount(editingTransaction.amount);
+      const category = categories[editingTransaction.type].find(c => c.name === editingTransaction.category);
+      setSelectedCategoryId(category ? category.id : null);
+      setNote(editingTransaction.note);
+      setDate(editingTransaction.date);
+    } else {
+      // Reset form jika mode tambah
+      setAmount('');
+      setSelectedCategoryId(null);
+      setNote('');
+      setDate(new Date().toISOString().split('T')[0]);
+    }
+  }, [editingTransaction, categories]);
+
+  const handleSave = async () => {
+    if (!amount || !selectedCategoryId) {
+      alert('Jumlah dan kategori tidak boleh kosong!');
+      return;
+    }
+
+    const category = categories[transactionType].find(c => c.id === selectedCategoryId);
+    const transactionData = {
+      amount: parseFloat(amount),
+      category: category.name, // Mengirim nama kategori sesuai data yang ada
+      type: transactionType,
+      note,
+      transaction_date: date, // Sesuaikan dengan nama kolom di DB
+    };
+
+    try {
+      if (editingTransaction) {
+        // Mode Edit
+        await updateTransaction(editingTransaction.id, transactionData);
+        alert('Transaksi berhasil diperbarui!');
+      } else {
+        // Mode Tambah
+        await addTransaction(transactionData);
+        alert('Transaksi berhasil ditambahkan!');
+      }
+      await refreshTransactions();
+      setShowTransactionModal(false);
+    } catch (error) {
+      console.error('Gagal menyimpan transaksi:', error);
+      alert('Gagal menyimpan transaksi.');
+    }
   };
 
   return (
@@ -45,7 +91,7 @@ const TransactionModal = ({
         {/* Header Modal */}
         <div className="p-6 border-b">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold">Tambah Transaksi</h3>
+            <h3 className="text-xl font-semibold">{editingTransaction ? 'Edit Transaksi' : 'Tambah Transaksi'}</h3>
             <button onClick={() => setShowTransactionModal(false)}>
               <X className="w-6 h-6" />
             </button>
@@ -63,6 +109,7 @@ const TransactionModal = ({
                   ? 'bg-red-500 text-white'
                   : 'bg-gray-200 dark:bg-gray-700'
               }`}
+              disabled={!!editingTransaction} // Nonaktifkan jika mode edit
             >
               Pengeluaran
             </button>
@@ -73,6 +120,7 @@ const TransactionModal = ({
                   ? 'bg-green-500 text-white'
                   : 'bg-gray-200 dark:bg-gray-700'
               }`}
+              disabled={!!editingTransaction} // Nonaktifkan jika mode edit
             >
               Pemasukan
             </button>
@@ -84,6 +132,19 @@ const TransactionModal = ({
             <input
               type="number"
               placeholder="0"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              className={`w-full p-2 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}
+            />
+          </div>
+
+          {/* Input Tanggal */}
+          <div>
+            <label className="block text-sm font-medium mb-2">Tanggal</label>
+            <input
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
               className={`w-full p-2 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}
             />
           </div>
@@ -97,7 +158,12 @@ const TransactionModal = ({
                 return (
                   <button
                     key={category.id}
-                    className={`p-2 rounded-lg border-2 border-gray-200 dark:border-gray-600 hover:border-blue-500 flex flex-col items-center justify-center gap-1`}
+                    onClick={() => setSelectedCategoryId(category.id)}
+                    className={`p-2 rounded-lg border-2 flex flex-col items-center justify-center gap-1 ${
+                      selectedCategoryId === category.id
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
+                        : 'border-gray-200 dark:border-gray-600'
+                    }`}
                   >
                     <div className={`w-8 h-8 rounded-full ${category.color} flex items-center justify-center`}>
                       <CategoryIcon className="w-4 h-4 text-white" />
@@ -115,6 +181,8 @@ const TransactionModal = ({
             <input
               type="text"
               placeholder="Tambahkan catatan..."
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
               className={`w-full p-2 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}
             />
           </div>
@@ -135,7 +203,7 @@ const TransactionModal = ({
             onClick={handleSave}
             className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-semibold"
           >
-            Simpan Transaksi
+            {editingTransaction ? 'Simpan Perubahan' : 'Simpan Transaksi'}
           </button>
         </div>
       </div>
