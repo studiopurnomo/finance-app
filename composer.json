@@ -1,0 +1,12 @@
+{
+    "name": "montrack/api",
+    "require": {
+        "yiisoft/yii2": "~2.0.14",
+        "yidas/yii2-bower-asset": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
