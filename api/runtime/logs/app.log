@@ -1,0 +1,939 @@
+2025-09-06 06:18:36 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:18:36 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'HstCfa4781535' => '1753585100858'
+    'HstCmu4781535' => '1753585100858'
+    '_ga' => 'GA1.1.1857903448.1753585103'
+    '_cc_id' => '32c1f52ef3f595823f27ef8d4bf22e29'
+    'HstCnv4781535' => '3'
+    'HstCns4781535' => '9'
+    'HstCla4781535' => '1754319919840'
+    'HstPn4781535' => '21'
+    'HstPt4781535' => '77'
+    '_ga_693LP2419S' => 'GS2.1.s1754317113$o4$g1$t1754319920$j60$l0$h0'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53002'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'HTTP_COOKIE' => 'HstCfa4781535=1753585100858; HstCmu4781535=1753585100858; _ga=GA1.1.1857903448.1753585103; _cc_id=32c1f52ef3f595823f27ef8d4bf22e29; HstCnv4781535=3; HstCns4781535=9; HstCla4781535=1754319919840; HstPn4781535=21; HstPt4781535=77; _ga_693LP2419S=GS2.1.s1754317113$o4$g1$t1754319920$j60$l0$h0'
+    'REQUEST_TIME_FLOAT' => 1757132316.2877
+    'REQUEST_TIME' => 1757132316
+]
+2025-09-06 06:19:34 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:19:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'HstCfa4781535' => '1753585100858'
+    'HstCmu4781535' => '1753585100858'
+    '_ga' => 'GA1.1.1857903448.1753585103'
+    '_cc_id' => '32c1f52ef3f595823f27ef8d4bf22e29'
+    'HstCnv4781535' => '3'
+    'HstCns4781535' => '9'
+    'HstCla4781535' => '1754319919840'
+    'HstPn4781535' => '21'
+    'HstPt4781535' => '77'
+    '_ga_693LP2419S' => 'GS2.1.s1754317113$o4$g1$t1754319920$j60$l0$h0'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59079'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'HTTP_COOKIE' => 'HstCfa4781535=1753585100858; HstCmu4781535=1753585100858; _ga=GA1.1.1857903448.1753585103; _cc_id=32c1f52ef3f595823f27ef8d4bf22e29; HstCnv4781535=3; HstCns4781535=9; HstCla4781535=1754319919840; HstPn4781535=21; HstPt4781535=77; _ga_693LP2419S=GS2.1.s1754317113$o4$g1$t1754319920$j60$l0$h0'
+    'REQUEST_TIME_FLOAT' => 1757132374.4094
+    'REQUEST_TIME' => 1757132374
+]
+2025-09-06 06:25:47 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:25:46 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50224'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3002'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3002/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757132746.9993
+    'REQUEST_TIME' => 1757132746
+]
+2025-09-06 06:28:28 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:28:28 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '58592'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3002'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3002/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757132908.8989
+    'REQUEST_TIME' => 1757132908
+]
+2025-09-06 06:28:29 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:28:29 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59261'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3002'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3002/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757132909.2016
+    'REQUEST_TIME' => 1757132909
+]
+2025-09-06 06:28:30 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:28:30 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55201'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3002'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3002/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757132910.7177
+    'REQUEST_TIME' => 1757132910
+]
+2025-09-06 06:31:36 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:31:36 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56105'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3002'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3002/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133096.2716
+    'REQUEST_TIME' => 1757133096
+]
+2025-09-06 06:31:37 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:31:37 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57921'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3002'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3002/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133097.0796
+    'REQUEST_TIME' => 1757133097
+]
+2025-09-06 06:39:40 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:39:40 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59642'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3003'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3003/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133580.384
+    'REQUEST_TIME' => 1757133580
+]
+2025-09-06 06:39:40 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:39:40 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59478'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '40'
+    'HTTP_CONTENT_LENGTH' => '40'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_ORIGIN' => 'http://localhost:3003'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3003/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133580.4174
+    'REQUEST_TIME' => 1757133580
+]
+2025-09-06 06:39:52 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:39:52 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '60845'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCESS_CONTROL_REQUEST_METHOD' => 'POST'
+    'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' => 'content-type'
+    'HTTP_ORIGIN' => 'http://localhost:3003'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3003/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133592.8536
+    'REQUEST_TIME' => 1757133592
+]
+2025-09-06 06:39:52 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:39:52 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61412'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '42'
+    'HTTP_CONTENT_LENGTH' => '42'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_ORIGIN' => 'http://localhost:3003'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3003/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133592.8835
+    'REQUEST_TIME' => 1757133592
+]
+2025-09-06 06:39:54 [::1][-][-][error][yii\di\NotInstantiableException] ReflectionException: Class "yii\debug\Module" does not exist in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:513
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(513): ReflectionClass->__construct('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#9 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#10 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#11 {main}
+
+Next yii\di\NotInstantiableException: Failed to instantiate component or class "yii\debug\Module". in C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php:515
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(391): yii\di\Container->getDependencies('yii\\debug\\Modul...')
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\di\Container.php(176): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\BaseYii.php(374): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(448): yii\BaseYii::createObject(Array, Array)
+#4 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(316): yii\base\Module->getModule('debug')
+#5 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#6 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(274): yii\web\Application->bootstrap()
+#7 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\BaseObject.php(112): yii\base\Application->init()
+#8 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(207): yii\base\BaseObject->__construct(Array)
+#9 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->__construct(Array)
+#10 {main}
+2025-09-06 06:39:54 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62962'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '42'
+    'HTTP_CONTENT_LENGTH' => '42'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_ORIGIN' => 'http://localhost:3003'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3003/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7'
+    'REQUEST_TIME_FLOAT' => 1757133594.1794
+    'REQUEST_TIME' => 1757133594
+]
+2025-09-06 06:41:22 [::1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Controller.php:320
+Stack trace:
+#0 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Controller.php(182): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('login', Array)
+#2 C:\laragon\www\montrack\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#3 C:\laragon\www\montrack\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 C:\laragon\www\montrack\api\web\index.php(12): yii\base\Application->run()
+#5 {main}
+2025-09-06 06:41:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\laragon\\www\\montrack\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64801'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\laragon\\www\\montrack\\api\\web\\index.php'
+    'PATH_INFO' => '/login'
+    'PHP_SELF' => '/index.php/login'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.5074'
+    'HTTP_HOST' => 'localhost:8080'
+    'CONTENT_LENGTH' => '42'
+    'HTTP_CONTENT_LENGTH' => '42'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'REQUEST_TIME_FLOAT' => 1757133682.665
+    'REQUEST_TIME' => 1757133682
+]
